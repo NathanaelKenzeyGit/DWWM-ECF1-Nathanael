@@ -1,0 +1,111 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.navbar {
+    background-color: $color-info-dark;
+    height: 64px;
+    display: flex;
+    position: relative;
+
+    &__brand {
+        font-family: $font-primary;
+        font-size: 1.5rem;
+        color: $color-body;
+        letter-spacing: 0.06em;
+
+        &--logo {
+            color: $color-secondary;
+        }
+    }
+
+    &__right {
+        @include flex($gap: 1rem);
+    }
+
+    #burger {
+        color: $color-secondary;
+        cursor: pointer;
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: none;
+
+        &.is-open {
+            @include flex($direction: column, $align: flex-start, $gap: 1.5rem);
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            background-color: $color-info-dark;
+            padding: 1rem 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+            @include flex($gap: 1.5rem);
+        }
+    }
+
+    &__link {
+        font-family: $font-secondary;
+        font-size: 0.86rem;
+        color: $color-body;
+        opacity: 0.82;
+        transition:
+            opacity 0.15s,
+            color 0.15s;
+
+        &:hover {
+            color: $color-secondary-light;
+            opacity: 1;
+        }
+        &--active {
+            color: $color-secondary;
+        }
+    }
+
+    &__cta {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            font-family: $font-secondary;
+            font-weight: $fw-semibold;
+            background-color: $color-secondary;
+            color: $color-info-dark;
+            border: none;
+            border-radius: 30px;
+            padding: 0.6rem 1.4rem;
+            cursor: pointer;
+            transition: background 0.15s;
+
+            &:hover {
+                background-color: $color-secondary-light;
+            }
+        }
+
+        &--mobile {
+            width: 100%;
+            font-family: $font-secondary;
+            font-weight: $fw-semibold;
+            background-color: $color-secondary;
+            color: $color-info-dark;
+            border: none;
+            border-radius: 30px;
+            padding: 0.8rem 1.2rem;
+            cursor: pointer;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 0 1.25rem;
+    @include flex($justify: space-between);
+}

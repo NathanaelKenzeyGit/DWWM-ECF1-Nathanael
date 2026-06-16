@@ -3,19 +3,54 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Page d'Accueil</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <link rel="stylesheet" href="dist/css/main.min.css" />
-        <title>Document</title>
     </head>
     <body>
+        <!-- Navbar -->
         <header>
             <nav class="navbar">
-                <div class="navbar__start">
-                    <span class="navbar__brand">Le phosphore</span>
+                <div class="container">
+                    <div class="navbar__brand">
+                        <span class="navbar__brand--logo">Le</span>
+                        Phosphore
+                    </div>
+                    <div class="navbar__right">
+                        <i class="fa-solid fa-bars fa-2xl" id="burger"></i>
+                        <ul class="navbar__list" id="nav-menu">
+                            <li class="navbar__item">
+                                <a href="" class="navbar__link navbar__link--active">Accueil</a>
+                            </li>
+                            <li class="navbar__item"><a href="" class="navbar__link">Programmations</a></li>
+                            <li class="navbar__item"><a href="" class="navbar__link">Infos pratiques</a></li>
+                            <li class="navbar__item">
+                                <button class="navbar__cta--mobile">
+                                    <i class="fa-solid fa-ticket"></i>
+                                    Billetterie
+                                </button>
+                            </li>
+                        </ul>
+                        <button class="navbar__cta">Billetterie</button>
+                    </div>
                 </div>
-                <div class="navbar__center"></div>
-                <div class="navbar__burger--icon"></div>
-                <div class="navbar__end"></div>
             </nav>
         </header>
+        <!-- Hero -->
+        <main></main>
+        <footer></footer>
+        <!-- Footer -->
+        <script>
+            const burger = document.getElementById("burger");
+            const navMenu = document.getElementById("nav-menu");
+
+            burger.addEventListener("click", function () {
+                navMenu.classList.toggle("is-open");
+                burger.classList.toggle("fa-bars");
+                burger.classList.toggle("fa-xmark");
+            });
+        </script>
     </body>
 </html>

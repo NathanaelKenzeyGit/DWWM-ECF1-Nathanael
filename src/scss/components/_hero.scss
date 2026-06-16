@@ -1,0 +1,87 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+    height: 100vh;
+    min-height: 520px;
+    overflow: hidden;
+    @include flex;
+    background: url("/src/assets/images/scene_principale.webp") center / cover no-repeat;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba($color-info-dark, 0.5);
+    }
+
+    .container {
+        @include flex($justify: center);
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+        color: $color-body;
+        padding: 0 1rem;
+        max-width: 700px;
+    }
+
+    &__kicker {
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: $color-secondary-light;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-size: 2.4rem;
+        margin-top: 1rem;
+        text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+
+        em {
+            font-style: italic;
+            color: $color-secondary-light;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 3.2rem;
+        }
+    }
+
+    &__sub {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba($color-body, 0.8);
+    }
+
+    &__cta {
+        @include flex($gap: 1rem);
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+    }
+
+    &__btn {
+        @include flex($gap: 8px);
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: $fw-semibold;
+        cursor: pointer;
+        border: none;
+
+        &--primary {
+            background-color: $color-secondary;
+            color: $color-info-dark;
+        }
+
+        &--ghost {
+            background: transparent;
+            color: $color-body;
+            border: 1.5px solid rgba($color-body, 0.5);
+        }
+    }
+}

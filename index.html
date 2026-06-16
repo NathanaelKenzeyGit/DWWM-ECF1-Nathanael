@@ -22,10 +22,14 @@
                         <i class="fa-solid fa-bars fa-2xl" id="burger"></i>
                         <ul class="navbar__list" id="nav-menu">
                             <li class="navbar__item">
-                                <a href="" class="navbar__link navbar__link--active">Accueil</a>
+                                <a href="index.html" class="navbar__link navbar__link--active">Accueil</a>
                             </li>
-                            <li class="navbar__item"><a href="" class="navbar__link">Programmations</a></li>
-                            <li class="navbar__item"><a href="" class="navbar__link">Infos pratiques</a></li>
+                            <li class="navbar__item">
+                                <a href="pages/programmation.html" class="navbar__link">Programmations</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="pages/infos-pratiques.html" class="navbar__link">Infos pratiques</a>
+                            </li>
                             <li class="navbar__item">
                                 <button class="navbar__cta--mobile">
                                     <i class="fa-solid fa-ticket"></i>
@@ -33,24 +37,64 @@
                                 </button>
                             </li>
                         </ul>
-                        <button class="navbar__cta">Billetterie</button>
+                        <button class="navbar__cta">
+                            <i class="fa-solid fa-ticket"></i>
+                            Billetterie
+                        </button>
                     </div>
                 </div>
             </nav>
         </header>
         <!-- Hero -->
         <main></main>
-        <footer></footer>
-        <!-- Footer -->
-        <script>
-            const burger = document.getElementById("burger");
-            const navMenu = document.getElementById("nav-menu");
-
-            burger.addEventListener("click", function () {
-                navMenu.classList.toggle("is-open");
-                burger.classList.toggle("fa-bars");
-                burger.classList.toggle("fa-xmark");
-            });
-        </script>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col--brand">
+                        <div class="footer__brand">
+                            <span class="footer__brand--logo">Le</span>
+                            Phosphore
+                        </div>
+                        <p class="footer__tagline">Vibrez. Partagez. Émerveillez-vous.</p>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Navigation</h4>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Accueil</a></li>
+                            <li><a href="" class="footer__link">Programmation</a></li>
+                            <li><a href="" class="footer__link">Infos pratiques</a></li>
+                            <li><a href="" class="footer__link">Billetterie</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Contact</h4>
+                        <ul class="footer__list">
+                            <li>12 rue des Arts, Centre-ville</li>
+                            <li><a href="" class="footer__link">01 23 45 67 89</a></li>
+                            <li><a href="" class="footer__link">bonjour@lephosphore.fr</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Horaires billetterie</h4>
+                        <ul class="footer__list">
+                            <li>Mar - Sam · 14h - 19h</li>
+                            <li>Soirs de spectacle · dès 1h avant</li>
+                            <li>
+                                <a href="pages/infos-pratiques.html" class="footer__link">Accès & plan de salle ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 Le Phosphore — Tous droits réservés</span>
+                <div>
+                    <a href="#" class="footer__bottom--link">Mentions légales</a>
+                    ·
+                    <a href="#" class="footer__bottom--link">Confidentialité</a>
+                </div>
+            </div>
+        </footer>
+        <script src="src/js/burger.js"></script>
     </body>
 </html>

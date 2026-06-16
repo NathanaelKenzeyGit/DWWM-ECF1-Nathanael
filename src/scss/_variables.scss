@@ -35,7 +35,7 @@ $fw-medium: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
 
-// ! remove
+// ! reset
 // ? i restart from 0 to get good start from all navigator, and i remove list style from link and list
 * {
     margin: 0;
@@ -43,4 +43,15 @@ $fw-bold: 700;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+}
+body {
+    font-family: $font-secondary;
+    color: $color-text;
+}
+a {
+    color: inherit;
+
+    &:visited {
+        color: inherit;
+    }
 }

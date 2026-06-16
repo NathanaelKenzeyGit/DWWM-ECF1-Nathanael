@@ -87,6 +87,7 @@
         }
 
         &--mobile {
+            @include flex($gap: 0.5rem);
             width: 100%;
             font-family: $font-secondary;
             font-weight: $fw-semibold;

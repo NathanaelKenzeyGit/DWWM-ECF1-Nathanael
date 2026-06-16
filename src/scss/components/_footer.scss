@@ -5,7 +5,9 @@
     background-color: $color-info-dark;
     color: $color-body;
     padding: 3rem 0 1.5rem;
-
+    .container {
+        padding-bottom: 2rem;
+    }
     &__grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -59,12 +61,11 @@
             color: $color-secondary-light;
         }
     }
-
     &__bottom {
         @include flex($justify: space-between);
         flex-wrap: wrap;
         padding: 1.25rem 2rem;
-        border-top: 1px solid rgba($color-body, 0.12);
+        border-top: 1px solid rgba($color-body, 0.1);
         font-size: 0.82rem;
         color: rgba($color-body, 0.5);
     }

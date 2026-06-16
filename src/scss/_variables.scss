@@ -29,3 +29,12 @@ $font-primary: "Playfair Display", serif;
 
 // ? Body ?
 $font-secondary: "Poppins", sans-serif;
+
+// ! remove
+// ? I remove list style from link and list
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}

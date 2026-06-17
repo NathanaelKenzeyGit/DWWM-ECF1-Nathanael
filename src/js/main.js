@@ -49,6 +49,17 @@ const cardsShows = async () => {
             btn.href = "pages/programmation.html";
             btn.textContent = "Réserver";
 
+            const footer = document.createElement("div");
+            footer.className = "card__footer";
+
+            const places = document.createElement("span");
+            places.className = "card__places";
+            places.textContent = `${n.places_total - n.places_vendues} places restantes`;
+
+            const prix = document.createElement("span");
+            prix.className = "card__price";
+            prix.textContent = `${n.prix} €`;
+
             meta.appendChild(artist);
             meta.appendChild(date);
             meta.appendChild(horaire);
@@ -58,6 +69,11 @@ const cardsShows = async () => {
 
             body.appendChild(title);
             body.appendChild(meta);
+
+            footer.appendChild(places);
+            footer.appendChild(prix);
+
+            body.appendChild(footer);
             body.appendChild(btn);
 
             card.appendChild(affichage);

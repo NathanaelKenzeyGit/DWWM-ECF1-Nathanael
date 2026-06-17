@@ -5,10 +5,15 @@ const cardsShows = async () => {
         // ? i convert them to use them in json format ?
         const data = await response.json();
         // ? Je recupere mon id "shows-grid" dans mon html ?
-        const grid = document.getElementById("Shows-grid");
+        const grid = document.getElementById("shows-grid");
         data.spectacles.slice(0, 3).forEach((n) => {
+            const img = document.createElement("img");
+            img.className = "card__img";
+            img.src = n.image;
+            img.alt = n.titre;
+
             const card = document.createElement("article");
-            card.className("card");
+            card.className(card);
 
             const affichage = document.createElement("span");
             affichage.className = "card__visual";
@@ -47,10 +52,15 @@ const cardsShows = async () => {
             meta.appendChild(artist);
             meta.appendChild(date);
             meta.appendChild(horaire);
-            visual.appendChild(badge);
+
+            affichage.appendChild(badge);
+            affichage.appendChild(img);
+            affichage.appendChild(badge);
+
             body.appendChild(title);
             body.appendChild(meta);
             body.appendChild(btn);
+
             card.appendChild(affichage);
             card.appendChild(body);
 

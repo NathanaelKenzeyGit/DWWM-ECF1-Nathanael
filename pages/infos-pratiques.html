@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infos pratiques — Le Phosphore</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="../dist/css/main.min.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar__brand">
+                        <span class="navbar__brand--logo">Le</span>
+                        Phosphore
+                    </div>
+                    <div class="navbar__right">
+                        <i class="fa-solid fa-bars fa-2xl" id="burger"></i>
+                        <ul class="navbar__list" id="nav-menu">
+                            <li class="navbar__item">
+                                <a href="../index.html" class="navbar__link">Accueil</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="programmation.html" class="navbar__link">Programmations</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="infos-pratiques.html" class="navbar__link navbar__link--active">
+                                    Infos pratiques
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <button class="navbar__cta--mobile">
+                                    <i class="fa-solid fa-ticket"></i>
+                                    Billetterie
+                                </button>
+                            </li>
+                        </ul>
+                        <button class="navbar__cta">
+                            <i class="fa-solid fa-ticket"></i>
+                            Billetterie
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="infos-hero">
+                <div class="container">
+                    <p class="infos-hero__kicker">Préparez votre venue</p>
+                    <h1 class="infos-hero__title">Infos pratiques</h1>
+                    <p class="infos-hero__desc">
+                        Services, accès, tarifs et plan de salle — tout pour profiter pleinement de votre soirée au
+                        Phosphore.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Nos services -->
+            <section class="services">
+                <div class="container">
+                    <div class="services__head">
+                        <p class="services__kicker">Sur place</p>
+                        <h2 class="services__title">Nos services</h2>
+                    </div>
+                    <div class="services__grid">
+                        <div class="services__card">
+                            <div class="services__icon"><i class="ph ph-wine"></i></div>
+                            <h3 class="services__name">Bar & Restauration</h3>
+                            <p class="services__desc">
+                                Un bar à vins et petite restauration, avant la représentation et à l'entracte.
+                            </p>
+                            <ul class="services__list">
+                                <li>Ouvert dès 1h avant</li>
+                                <li>Planches & douceurs</li>
+                                <li>Sans alcools & softs</li>
+                            </ul>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__icon"><i class="ph ph-coat-hanger"></i></div>
+                            <h3 class="services__name">Accueil & Vestiaire</h3>
+                            <p class="services__desc">
+                                Équipe d'accueil dès l'ouverture des portes. Vestiaire gratuit disponible.
+                            </p>
+                            <ul class="services__list">
+                                <li>Ouverture 30 min avant</li>
+                                <li>Vestiaire gratuit</li>
+                                <li>Programme offert</li>
+                            </ul>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__icon"><i class="ph ph-wheelchair"></i></div>
+                            <h3 class="services__name">Accessibilité</h3>
+                            <p class="services__desc">
+                                Salle entièrement accessible PMR. Boucle magnétique disponible en salle.
+                            </p>
+                            <ul class="services__list">
+                                <li>Accès PMR de plain-pied</li>
+                                <li>Boucle magnétique</li>
+                                <li>Places dédiées</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accès & transports -->
+            <section class="acces">
+                <div class="container">
+                    <div class="acces__head">
+                        <p class="acces__kicker">Venir au Phosphore</p>
+                        <h2 class="acces__title">Accès & transports</h2>
+                    </div>
+                    <div class="acces__grid">
+                        <div class="acces__info">
+                            <p class="acces__label">Adresse</p>
+                            <p class="acces__address">
+                                Le Phosphore
+                                <br />
+                                12 rue des Arts
+                                <br />
+                                Centre-ville
+                            </p>
+                            <p class="acces__label">Transports en commun</p>
+                            <ul class="acces__list">
+                                <li>
+                                    <span class="acces__dot acces__dot--red"></span>
+                                    Théâtre — Hôtel de Ville · 0-3 min à pied
+                                </li>
+                                <li>
+                                    <span class="acces__dot acces__dot--green"></span>
+                                    Bus arrêt Les Arts · au pied de la salle
+                                </li>
+                                <li>
+                                    <span class="acces__dot acces__dot--blue"></span>
+                                    Bus de nuit · retours après spectacle
+                                </li>
+                                <li>
+                                    <span class="acces__dot acces__dot--or"></span>
+                                    Parking Centre · 150 m, tarif soirée
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="acces__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.5117770993265!2d4.3884954110344605!3d45.439342234977445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5aeaa467aa737%3A0x12b357efa745c9e1!2s12%20Rue%20des%20Arts%2C%2042000%20Saint-%C3%89tienne!5e0!3m2!1sfr!2sfr!4v1781700795203!5m2!1sfr!2sfr"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nos tarifs -->
+            <section class="tarifs">
+                <div class="container">
+                    <div class="tarifs__head">
+                        <p class="tarifs__kicker">Billetterie</p>
+                        <h2 class="tarifs__title">Nos tarifs</h2>
+                        <p class="tarifs__desc">
+                            Tarif par place, nos estimations ne incluent pas les réductions sur justificatif.
+                        </p>
+                    </div>
+                    <div class="tarifs__grid">
+                        <div class="tarifs__card">
+                            <p class="tarifs__name">Plein tarif</p>
+                            <p class="tarifs__price">32 €</p>
+                            <p class="tarifs__detail">Accès à toutes nos séances</p>
+                        </div>
+                        <div class="tarifs__card">
+                            <p class="tarifs__name">Tarif adulte</p>
+                            <p class="tarifs__price">24 €</p>
+                            <p class="tarifs__detail">-25 ans · Étudiants · Demandeurs d'emploi</p>
+                        </div>
+                        <div class="tarifs__card tarifs__card--featured">
+                            <p class="tarifs__name">Carte Phosphore</p>
+                            <p class="tarifs__price">20 €</p>
+                            <p class="tarifs__detail">Abonnement annuel avec avantages</p>
+                        </div>
+                        <div class="tarifs__card">
+                            <p class="tarifs__name">Groupes</p>
+                            <p class="tarifs__price">22 €</p>
+                            <p class="tarifs__detail">Dès 10 personnes · Scolaires & asso</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Plan de salle -->
+            <section class="plan">
+                <div class="container">
+                    <div class="plan__head">
+                        <p class="plan__kicker">Choisir sa place</p>
+                        <h2 class="plan__title">Plan de salle</h2>
+                        <p class="plan__desc">Explorez les zones, chaque espace évolue sa capacité et son tarif.</p>
+                    </div>
+                    <div class="plan__grid">
+                        <div class="plan__zones">
+                            <div class="plan__zone">
+                                <span class="plan__zone-name">Orchestre</span>
+                                <span class="plan__zone-places">60 places</span>
+                                <span class="plan__zone-price">32 €</span>
+                            </div>
+                            <div class="plan__zone">
+                                <span class="plan__zone-name">Mezzanine</span>
+                                <span class="plan__zone-places">36 places</span>
+                                <span class="plan__zone-price">28 €</span>
+                            </div>
+                            <div class="plan__zone">
+                                <span class="plan__zone-name">Galerie</span>
+                                <span class="plan__zone-places">24 places</span>
+                                <span class="plan__zone-price">24 €</span>
+                            </div>
+                        </div>
+                        <div class="plan__img">
+                            <img src="../src/assets/images/plan-salle.webp" alt="Plan de salle Le Phosphore" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col--brand">
+                        <div class="footer__brand">
+                            <span class="footer__brand--logo">Le</span>
+                            Phosphore
+                        </div>
+                        <p class="footer__tagline">Vibrez. Partagez. Émerveillez-vous.</p>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Navigation</h4>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Accueil</a></li>
+                            <li><a href="" class="footer__link">Programmation</a></li>
+                            <li><a href="" class="footer__link">Infos pratiques</a></li>
+                            <li><a href="" class="footer__link">Billetterie</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Contact</h4>
+                        <ul class="footer__list">
+                            <li>12 rue des Arts, Centre-ville</li>
+                            <li><a href="#" class="footer__link">05 56 78 23 86</a></li>
+                            <li><a href="#" class="footer__link">bonjour@lephosphore.fr</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Horaires billetterie</h4>
+                        <ul class="footer__list">
+                            <li>Mar - Sam · 14h - 19h</li>
+                            <li>Soirs de spectacle · dès 1h avant</li>
+                            <li>
+                                <a href="pages/infos-pratiques.html" class="footer__link">Accès & plan de salle ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 Le Phosphore — Tous droits réservés</span>
+                <div>
+                    <a href="#" class="footer__bottom--link">Mentions légales</a>
+                    ·
+                    <a href="#" class="footer__bottom--link">Confidentialité</a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="../src/js/burger.js"></script>
+    </body>
+</html>

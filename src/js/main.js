@@ -7,13 +7,16 @@ const cardsShows = async () => {
         // ? Je recupere mon id "shows-grid" dans mon html ?
         const grid = document.getElementById("shows-grid");
         data.spectacles.slice(0, 3).forEach((n) => {
+            const placesRestantes = n.places_total - n.places_vendues;
+            const soldOut = placesRestantes === 0;
+
             const img = document.createElement("img");
             img.className = "card__img";
             img.src = n.image;
             img.alt = n.titre;
 
             const card = document.createElement("article");
-            card.className = "card";
+            card.className = `card ${soldOut ? "card--soldout" : ""}`;
 
             const affichage = document.createElement("div");
             affichage.className = "card__visual";
@@ -45,16 +48,16 @@ const cardsShows = async () => {
             horaire.textContent = n.horaire;
 
             const btn = document.createElement("a");
-            btn.className = "card__btn";
             btn.href = "pages/programmation.html";
-            btn.textContent = "Réserver";
+            btn.textContent = soldOut ? "Complet" : "Réserver";
+            btn.className = `card__btn ${soldOut ? "card__btn--soldout" : ""}`;
 
             const footer = document.createElement("div");
             footer.className = "card__footer";
 
             const places = document.createElement("span");
             places.className = "card__places";
-            places.textContent = `${n.places_total - n.places_vendues} places restantes`;
+            places.textContent = soldOut ? "Complet" : `${placesRestantes} places restantes`;
 
             const prix = document.createElement("span");
             prix.className = "card__price";

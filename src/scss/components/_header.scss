@@ -8,7 +8,7 @@ header {
 }
 .navbar {
     background-color: $color-info-dark;
-    height: 4rem;
+    height: 5rem;
     @include flex;
 
     &__brand {

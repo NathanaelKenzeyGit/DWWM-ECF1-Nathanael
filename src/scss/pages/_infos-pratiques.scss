@@ -1,0 +1,30 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.infos-hero {
+    background-color: $color-primary;
+    padding: 4rem 0;
+    text-align: center;
+
+    .container {
+        @include flex($direction: column, $gap: 1rem);
+    }
+
+    &__kicker {
+        @include kicker;
+        color: $color-secondary;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-size: clamp(2rem, 3vw + 0.5rem, 3.5rem);
+        color: $color-body;
+    }
+
+    &__desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba($color-body, 0.75);
+        max-width: 36em;
+    }
+}

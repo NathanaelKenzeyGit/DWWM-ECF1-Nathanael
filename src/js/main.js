@@ -15,11 +15,11 @@ const cardsShows = async () => {
             const card = document.createElement("article");
             card.className = "card";
 
-            const affichage = document.createElement("span");
+            const affichage = document.createElement("div");
             affichage.className = "card__visual";
 
             const badge = document.createElement("span");
-            badge.className = "card__badge";
+            badge.className = `card__badge card__badge--${n.type}`;
             badge.textContent = n.type;
 
             const body = document.createElement("div");

@@ -43,16 +43,16 @@
 }
 
 .card {
-    background-color: white;
+    background-color: $color-body;
     border: 1px solid $color-body-dark;
     border-radius: 16px;
     overflow: hidden;
     @include flex($direction: column);
+    box-shadow: 0 4px 16px rgba($color-info-dark, 0.12);
 
     &__visual {
-        display: block;
         position: relative;
-        height: 160px;
+        height: 180px;
         width: 100%;
         overflow: hidden;
         background: linear-gradient(135deg, $color-info-light, $color-info-dark);
@@ -71,11 +71,26 @@
         font-weight: $fw-semibold;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        background: rgba($color-info-dark, 0.85);
-        color: $color-secondary-light;
         padding: 6px 11px;
         border-radius: 14px;
-        border: 1px solid rgba($color-secondary, 0.35);
+
+        &--theatre {
+            background: $color-primary;
+            color: $color-body;
+            border: 0.25px solid rgba($color-body, 0.35);
+        }
+
+        &--concert {
+            background: rgba($color-info-dark, 0.85);
+            color: $color-secondary-light;
+            border: 1px solid rgba($color-secondary, 0.35);
+        }
+
+        &--standup {
+            background: rgba($color-info-dark, 0.85);
+            color: $color-body;
+            border: 1px solid rgba($color-body, 0.35);
+        }
     }
 
     &__body {

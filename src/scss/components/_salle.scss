@@ -1,0 +1,126 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.salle {
+    background-color: $color-info-dark;
+    color: $color-body;
+
+    .container {
+        @include flex($direction: column);
+        padding: 0;
+
+        @media (min-width: 1024px) {
+            @include flex($direction: row, $justify: space-between, $gap: 4rem);
+            align-items: center;
+            min-height: 500px;
+            padding: 0 1.25rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (min-width: 1024px) {
+            width: 48%;
+            height: 460px;
+            border-radius: 16px;
+        }
+    }
+
+    &__content {
+        @include flex($direction: column, $align: flex-start, $gap: 2.5rem);
+        padding: 2.5rem 1.25rem;
+
+        @media (min-width: 1024px) {
+            padding-top: 1rem;
+        }
+    }
+
+    &__kicker {
+        @include kicker;
+        color: $color-secondary;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-size: clamp(1.8rem, 2vw + 0.5rem, 2.5rem);
+        line-height: 1.1;
+        color: $color-body;
+
+        em {
+            font-style: italic;
+            color: $color-secondary-light;
+        }
+    }
+
+    &__desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba($color-body, 0.75);
+    }
+
+    &__stats {
+        @include flex($justify: space-between, $gap: 1rem);
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        padding-inline: 1rem;
+        border-top: 1px solid rgba($color-body, 0.12);
+        width: 100%;
+    }
+
+    &__stat {
+        @include flex($direction: column, $align: flex-start, $gap: 0.25rem);
+
+        &--number {
+            font-family: $font-primary;
+            font-size: 2rem;
+            font-weight: $fw-bold;
+            color: $color-secondary-light;
+        }
+
+        &--label {
+            font-size: 0.82rem;
+            color: $color-body;
+            letter-spacing: 0.04em;
+        }
+    }
+
+    &__btn {
+        @include flex($gap: 0.5rem);
+        justify-content: center;
+        font-family: $font-secondary;
+        font-weight: $fw-semibold;
+        font-size: 1rem;
+        color: $color-body;
+        border: 1.5px solid rgba($color-body, 0.5);
+        border-radius: 2rem;
+        padding: 16px 40px;
+        width: 100%;
+        transition:
+            border-color 0.15s,
+            color 0.15s;
+
+        i {
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            border-color: $color-secondary;
+            color: $color-secondary-light;
+        }
+
+        @media (min-width: 768px) {
+            width: auto;
+        }
+    }
+}

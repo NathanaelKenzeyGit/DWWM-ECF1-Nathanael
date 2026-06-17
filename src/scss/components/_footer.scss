@@ -12,6 +12,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
+        flex: 1;
 
         @media (min-width: 768px) {
             grid-template-columns: 1.6fr 1fr 1fr 1.2fr;

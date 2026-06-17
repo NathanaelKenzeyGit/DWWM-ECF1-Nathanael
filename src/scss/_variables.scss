@@ -51,3 +51,10 @@ body {
 a {
     color: inherit;
 }
+//  ? size icon phosphore library ?
+.ph {
+    font-size: 1.2rem;
+}
+
+// ? btn cta for dark bg ?
+$color-cta-ghost: rgba($color-body, 0.5);

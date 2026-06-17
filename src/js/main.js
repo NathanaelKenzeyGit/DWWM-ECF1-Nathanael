@@ -13,7 +13,7 @@ const cardsShows = async () => {
             img.alt = n.titre;
 
             const card = document.createElement("article");
-            card.className(card);
+            card.className = "card";
 
             const affichage = document.createElement("span");
             affichage.className = "card__visual";
@@ -55,7 +55,6 @@ const cardsShows = async () => {
 
             affichage.appendChild(badge);
             affichage.appendChild(img);
-            affichage.appendChild(badge);
 
             body.appendChild(title);
             body.appendChild(meta);

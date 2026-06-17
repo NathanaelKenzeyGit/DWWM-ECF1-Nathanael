@@ -13,10 +13,7 @@
     }
 
     &__kicker {
-        font-size: 0.72rem;
-        font-weight: $fw-semibold;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
+        @include kicker;
         color: $color-secondary;
     }
 

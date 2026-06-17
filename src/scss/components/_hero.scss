@@ -22,9 +22,7 @@
     }
 
     &__kicker {
-        font-size: 0.7rem;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
+        @include kicker;
         color: $color-secondary-light;
     }
 

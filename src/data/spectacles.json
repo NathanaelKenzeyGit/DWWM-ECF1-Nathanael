@@ -12,7 +12,7 @@
             "places_total": 120,
             "places_vendues": 87,
             "artiste": "Cie Les Éclaireurs",
-            "image": "./assets/images/ahmed-music-jazz-manouche.webp"
+            "image": "./assets/images/cyrano-de-bergerac.webp"
         },
         {
             "id": 2,
@@ -26,7 +26,7 @@
             "places_total": 120,
             "places_vendues": 120,
             "artiste": "Marina Music",
-            "image": ""
+            "image": "./assets/images/marina-music-electro-pop-live.webp"
         },
         {
             "id": 3,
@@ -40,7 +40,7 @@
             "places_total": 120,
             "places_vendues": 63,
             "artiste": "Paul Music",
-            "image": ""
+            "image": "./assets/images/paul-music-rock-independant.webp"
         },
         {
             "id": 4,
@@ -54,7 +54,7 @@
             "places_total": 120,
             "places_vendues": 112,
             "artiste": "Fadily Camara",
-            "image": ""
+            "image": "fadily-camara-la-plus-drole.webp"
         },
         {
             "id": 5,
@@ -68,7 +68,7 @@
             "places_total": 120,
             "places_vendues": 120,
             "artiste": "Cie du Passage",
-            "image": ""
+            "image": "./assets/images/en-attendant-godot.webp"
         },
         {
             "id": 6,
@@ -82,7 +82,7 @@
             "places_total": 120,
             "places_vendues": 45,
             "artiste": "Ahmed Music Quartet",
-            "image": ""
+            "image": "./assets/images/ahmed-music-jazz-manouche.webp"
         },
         {
             "id": 7,
@@ -96,7 +96,7 @@
             "places_total": 120,
             "places_vendues": 78,
             "artiste": "Nora Music",
-            "image": ""
+            "image": "./assets/images/nora-music-chanson-francaise.webp"
         },
         {
             "id": 8,
@@ -110,7 +110,7 @@
             "places_total": 120,
             "places_vendues": 98,
             "artiste": "Jamel Comedy Club",
-            "image": ""
+            "image": "./assets/images/jamel-comedy-club.webp"
         }
     ]
 }

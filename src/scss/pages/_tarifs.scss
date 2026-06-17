@@ -1,0 +1,93 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.tarifs {
+    background-color: $color-body;
+    padding: 4rem 0;
+
+    .container {
+        @include flex($direction: column, $gap: 2.5rem, $align: flex-start);
+    }
+
+    &__head {
+        text-align: left;
+    }
+
+    &__kicker {
+        @include kicker;
+        color: $color-secondary-dark;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-size: clamp(1.6rem, 2vw + 0.5rem, 2.2rem);
+        color: $color-info;
+        margin-top: 0.5rem;
+    }
+
+    &__desc {
+        font-size: 0.9rem;
+        color: $color-text-meta;
+        margin-top: 0.5rem;
+    }
+
+    &__grid {
+        @include flex($justify: flex-start, $gap: 1rem);
+        flex-wrap: wrap;
+        width: 100%;
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__card {
+        @include flex($direction: column, $align: center, $gap: 0.75rem);
+        background-color: $color-body;
+        border: 1px solid rgba($color-info, 0.1);
+        border-radius: 16px;
+        padding: 2rem 1rem;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba($color-info, 0.08);
+        flex: 1;
+
+        &--featured {
+            background-color: $color-primary;
+            border-color: $color-primary;
+
+            .tarifs__name {
+                color: $color-body;
+            }
+
+            .tarifs__price {
+                color: $color-secondary;
+            }
+
+            .tarifs__detail {
+                color: rgba($color-body, 0.75);
+            }
+        }
+    }
+
+    &__name {
+        font-family: $font-secondary;
+        font-size: 0.85rem;
+        font-weight: $fw-semibold;
+        color: $color-text-meta;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    &__price {
+        font-family: $font-primary;
+        font-size: 2.5rem;
+        font-weight: $fw-bold;
+        color: $color-primary;
+        line-height: 1;
+    }
+
+    &__detail {
+        font-size: 0.78rem;
+        color: $color-text-light;
+        line-height: 1.5;
+    }
+}

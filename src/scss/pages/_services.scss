@@ -15,7 +15,7 @@
 
     &__kicker {
         @include kicker;
-        color: $color-secondary-dark;
+        color: $color-secondary;
     }
 
     &__title {
@@ -63,12 +63,12 @@
     &__desc {
         font-size: 1rem;
         line-height: 1.6;
-        color: $color-text-meta;
+        color: $color-text;
     }
 
     &__list {
         @include flex($direction: column, $align: flex-start, $gap: 0.4rem);
         font-size: 0.9rem;
-        color: $color-text-light;
+        color: $color-text;
     }
 }

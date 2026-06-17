@@ -36,7 +36,7 @@ $fw-semibold: 600;
 $fw-bold: 700;
 
 // ! reset
-// ? i restart from 0 to get good start from all navigator, and i remove list style from link and list
+// ? i restart from 0 to get good start from all navigator, and i remove list style from link <a> and list <li>
 * {
     margin: 0;
     padding: 0;

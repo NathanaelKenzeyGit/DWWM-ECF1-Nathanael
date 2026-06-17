@@ -16,7 +16,7 @@
 
     &__kicker {
         @include kicker;
-        color: $color-secondary-dark;
+        color: $color-primary;
     }
 
     &__title {
@@ -114,7 +114,7 @@
         @include flex($justify: flex-start, $gap: 0.5rem);
         flex-wrap: wrap;
         font-size: 0.8rem;
-        color: $color-text-meta;
+        color: $color-text;
     }
 
     &__artist {
@@ -123,11 +123,11 @@
     }
 
     &__date {
-        color: $color-text-meta;
+        color: $color-text;
     }
 
-    .hours {
-        color: $color-text-meta;
+    &__hours {
+        color: $color-text;
     }
 
     &__btn {
@@ -156,7 +156,7 @@
 
     &__places {
         font-size: 0.9rem;
-        color: $color-text-meta;
+        color: $color-text;
     }
 
     &__price {

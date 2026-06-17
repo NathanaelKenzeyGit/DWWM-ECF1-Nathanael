@@ -15,7 +15,7 @@
 
     &__kicker {
         @include kicker;
-        color: $color-secondary-dark;
+        color: $color-primary;
     }
 
     &__title {
@@ -27,7 +27,7 @@
 
     &__desc {
         font-size: 0.9rem;
-        color: $color-text-meta;
+        color: $color-text;
         margin-top: 0.5rem;
     }
 
@@ -72,7 +72,7 @@
         font-family: $font-secondary;
         font-size: 0.85rem;
         font-weight: $fw-semibold;
-        color: $color-text-meta;
+        color: $color-text;
         text-transform: uppercase;
         letter-spacing: 0.1em;
     }
@@ -87,7 +87,7 @@
 
     &__detail {
         font-size: 0.78rem;
-        color: $color-text-light;
+        color: $color-text;
         line-height: 1.5;
     }
 }

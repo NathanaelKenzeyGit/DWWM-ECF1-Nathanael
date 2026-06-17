@@ -1,0 +1,72 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.categories {
+    background-color: $color-info;
+    padding: 4rem 0;
+    .container {
+        @include flex($direction: column);
+    }
+    &__head {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    &__kicker {
+        font-size: 0.72rem;
+        font-weight: $fw-semibold;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: $color-secondary;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-size: clamp(1.6rem, 2vw + 0.5rem, 2.2rem);
+        color: $color-body;
+        margin-top: 0.5rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__card {
+        @include flex($direction: column, $gap: 0.75rem);
+        background-color: $color-info-dark;
+        border: 1px solid rgba($color-secondary, 0.18);
+        border-radius: 16px;
+        padding: 2rem 1rem;
+        text-align: center;
+        transition:
+            border-color 0.2s,
+            transform 0.2s;
+
+        &:hover {
+            border-color: $color-secondary;
+            transform: translateY(-4px);
+        }
+    }
+
+    &__icon {
+        font-size: 2rem;
+        color: $color-secondary;
+    }
+
+    &__name {
+        font-family: $font-primary;
+        font-size: 1.1rem;
+        color: $color-body;
+    }
+
+    &__sub {
+        font-size: 0.78rem;
+        color: rgba($color-body, 0.55);
+    }
+}

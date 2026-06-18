@@ -49,6 +49,66 @@
     overflow: hidden;
     @include flex($direction: column);
     box-shadow: 0 4px 16px rgba($color-info-dark, 0.12);
+    &__toggle {
+        font-family: $font-secondary;
+        font-size: 0.82rem;
+        font-weight: $fw-semibold;
+        color: $color-secondary;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: color 0.15s;
+
+        &:hover {
+            color: $color-secondary-light;
+        }
+    }
+
+    &__desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: $color-secondary;
+        padding-top: 0.5rem;
+    }
+    &--soldout {
+        background-color: $color-primary;
+        border-color: $color-primary;
+
+        .card__title {
+            color: $color-body;
+        }
+
+        .card__meta {
+            color: rgba($color-body, 0.75);
+        }
+
+        .card__artist {
+            color: $color-secondary;
+        }
+
+        .card__date,
+        .card__hours {
+            color: rgba($color-body, 0.75);
+        }
+
+        .card__bar {
+            background: rgba($color-body, 0.2);
+        }
+
+        .card__footer {
+            border-top-color: rgba($color-body, 0.2);
+        }
+
+        .card__places {
+            color: $color-secondary;
+            font-weight: $fw-semibold;
+        }
+
+        .card__price {
+            color: $color-body;
+        }
+    }
 
     &__visual {
         position: relative;
@@ -56,16 +116,19 @@
         width: 100%;
         overflow: hidden;
         background: linear-gradient(135deg, $color-info-light, $color-info-dark);
+
         @media (min-width: 1024px) {
             height: 260px;
         }
     }
+
     &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
+
     &__badge {
         position: absolute;
         top: 12px;
@@ -130,6 +193,43 @@
         color: $color-text;
     }
 
+    &__fill {
+        width: 100%;
+    }
+
+    &__bar {
+        height: 8px;
+        border-radius: 6px;
+        background: $color-body-dark;
+        overflow: hidden;
+        border: 0.5px solid $color-secondary;
+    }
+
+    &__progress {
+        height: 100%;
+        border-radius: 6px;
+        background: linear-gradient(90deg, $color-secondary-dark, $color-secondary);
+    }
+
+    &__footer {
+        @include flex($justify: space-between);
+        width: 100%;
+        padding-top: 0.5rem;
+        border-top: 1px solid $color-body-dark;
+    }
+
+    &__places {
+        font-size: 0.9rem;
+        color: $color-primary;
+        font-weight: $fw-semibold;
+    }
+
+    &__price {
+        font-size: 1rem;
+        font-weight: $fw-bold;
+        color: $color-primary;
+    }
+
     &__btn {
         display: block;
         width: 100%;
@@ -146,22 +246,5 @@
         &:hover {
             background-color: $color-secondary-light;
         }
-    }
-    &__footer {
-        @include flex($justify: space-between);
-        width: 100%;
-        padding-top: 0.5rem;
-        border-top: 1px solid $color-body-dark;
-    }
-
-    &__places {
-        font-size: 0.9rem;
-        color: $color-text;
-    }
-
-    &__price {
-        font-size: 1rem;
-        font-weight: $fw-bold;
-        color: $color-primary;
     }
 }

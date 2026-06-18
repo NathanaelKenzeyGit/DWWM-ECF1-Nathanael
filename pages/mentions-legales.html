@@ -3,12 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Programmation du Phosphore — théâtre, concerts et stand-up du 20 au 22 juin 2026. Filtrez et réservez vos places."
-        />
-
-        <title>Programmation — Le Phosphore</title>
+        <meta name="description" content="Mentions légales du site Le Phosphore." />
+        <title>Mentions légales — Le Phosphore</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <link rel="stylesheet" href="../dist/css/main.min.css" />
     </head>
@@ -30,101 +26,71 @@
                                 <a href="programmation.html" class="navbar__link">Programmations</a>
                             </li>
                             <li class="navbar__item">
-                                <a href="infos-pratiques.html" class="navbar__link navbar__link--active">
-                                    Infos pratiques
-                                </a>
+                                <a href="infos-pratiques.html" class="navbar__link">Infos pratiques</a>
                             </li>
                             <li class="navbar__item">
-                                <button class="navbar__cta--mobile">
-                                    <i class="fa-solid fa-ticket"></i>
+                                <button class="navbar__cta--mobile" type="button">
+                                    <i class="fa-solid fa-ticket" aria-hidden="true"></i>
                                     Billetterie
                                 </button>
                             </li>
                         </ul>
-                        <button class="navbar__cta">
-                            <i class="fa-solid fa-ticket"></i>
+                        <button class="navbar__cta" type="button">
+                            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
                             Billetterie
                         </button>
                     </div>
                 </div>
             </nav>
         </header>
+
         <main>
-            <!-- Hero -->
-            <section class="prog-hero">
+            <section class="legal">
                 <div class="container">
-                    <p class="prog-hero__kicker">Du 20 au 22 juin 2026</p>
-                    <h1 class="prog-hero__title">La programmation</h1>
-                    <h2 class="prog-hero__desc">
-                        Trois jours, toutes les scènes. Filtrez par type, par date ou masquez les séances complètes.
-                    </h2>
-                </div>
-            </section>
+                    <h1 class="legal__title">Mentions légales</h1>
 
-            <!-- Filtres -->
-            <section class="prog-filters" aria-label="Filtres de programmation">
-                <div class="container">
-                    <div class="prog-filters__group">
-                        <span class="prog-filters__label">type</span>
-                        <div class="prog-filters__btns">
-                            <button
-                                class="prog-filters__btn prog-filters__btn--active"
-                                type="button"
-                                data-filter="type"
-                                data-value="all"
-                            >
-                                tous
-                            </button>
-                            <button class="prog-filters__btn" type="button" data-filter="type" data-value="theatre">
-                                théâtre
-                            </button>
-                            <button class="prog-filters__btn" type="button" data-filter="type" data-value="concert">
-                                concert
-                            </button>
-                            <button class="prog-filters__btn" type="button" data-filter="type" data-value="standup">
-                                stand-up
-                            </button>
-                        </div>
+                    <div class="legal__section">
+                        <h2 class="legal__subtitle">Éditeur du site</h2>
+                        <p>Le Phosphore — Salle de spectacle</p>
+                        <p>12 rue des Arts, Centre-ville</p>
+                        <p>Téléphone : 05 56 78 23 86</p>
+                        <p>Email : bonjour@lephosphore.fr</p>
                     </div>
-                    <div class="prog-filters__group">
-                        <span class="prog-filters__label">date</span>
-                        <div class="prog-filters__btns">
-                            <button
-                                class="prog-filters__btn prog-filters__btn--active"
-                                type="button"
-                                data-filter="date"
-                                data-value="all"
-                            >
-                                toutes
-                            </button>
-                            <button class="prog-filters__btn" type="button" data-filter="date" data-value="2026-06-20">
-                                vendredi 20
-                            </button>
-                            <button class="prog-filters__btn" type="button" data-filter="date" data-value="2026-06-21">
-                                samedi 21
-                            </button>
-                            <button class="prog-filters__btn" type="button" data-filter="date" data-value="2026-06-22">
-                                dimanche 22
-                            </button>
-                        </div>
-                    </div>
-                    <div class="prog-filters__group">
-                        <button class="prog-filters__btn--soldout" type="button" id="toggle-soldout">
-                            Masquer les complets
-                        </button>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Cards -->
-            <section class="prog-grid" aria-label="Liste des spectacles">
-                <div class="container">
-                    <div class="prog-cards" id="prog-grid"></div>
+                    <div class="legal__section">
+                        <h2 class="legal__subtitle">Hébergement</h2>
+                        <p>GitHub Pages — github.com</p>
+                        <p>OVH SAS — 2 rue Kellermann, 59100 Roubaix</p>
+                    </div>
+
+                    <div class="legal__section">
+                        <h2 class="legal__subtitle">Propriété intellectuelle</h2>
+                        <p>
+                            L'ensemble du contenu de ce site est protégé par le droit d'auteur. Toute reproduction est
+                            interdite sans autorisation préalable.
+                        </p>
+                    </div>
+
+                    <div class="legal__section">
+                        <h2 class="legal__subtitle">Données personnelles</h2>
+                        <p>
+                            Les données collectées via le formulaire newsletter sont utilisées uniquement pour l'envoi
+                            d'informations sur la programmation. Conformément au RGPD, vous disposez d'un droit d'accès,
+                            de rectification et de suppression de vos données en contactant bonjour@lephosphore.fr.
+                        </p>
+                    </div>
+
+                    <div class="legal__section">
+                        <h2 class="legal__subtitle">Cookies</h2>
+                        <p>
+                            Ce site utilise des cookies pour améliorer votre expérience de navigation. Vous pouvez les
+                            accepter ou les refuser via le bandeau présenté lors de votre première visite.
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="footer__grid">
@@ -153,7 +119,7 @@
                         </ul>
                     </div>
                     <div class="footer__col">
-                        <h4 class="footer__title">Horaires billetterie</h4>
+                        <h3 class="footer__title">Horaires billetterie</h3>
                         <ul class="footer__list">
                             <li>Mar - Sam · 14h - 19h</li>
                             <li>Soirs de spectacle · 1h avant</li>
@@ -174,6 +140,5 @@
 
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
         <script src="../src/js/burger.js"></script>
-        <script src="../src/js/programmation.js"></script>
     </body>
 </html>

@@ -1,30 +1,38 @@
 const cardsShows = async () => {
     try {
-        // ? i get data ?
-        const response = await fetch("/src/data/spectacles.json");
-        // ? i convert them to use them in json format ?
+        // ? Fetch spectacles data from JSON file ?
+        const response = await fetch("casrc/data/spectacles.json");
+        // ? Convert response to JSON format ?
         const data = await response.json();
-        // ? Je recupere mon id "shows-grid" dans mon html ?
+        // ? Get the shows grid container from the DOM ?
         const grid = document.getElementById("shows-grid");
+
+        // ? Loop through the first 3 spectacles only ?
         data.spectacles.slice(0, 3).forEach((n) => {
+            // ? Calculate remaining places and sold out status ?
             const placesRestantes = n.places_total - n.places_vendues;
             const soldOut = placesRestantes === 0;
+            // ? Calculate fill percentage for progress bar ?
+            const pct = Math.round((n.places_vendues / n.places_total) * 100);
+
+            // ? Create card elements ?
+            const card = document.createElement("article");
+            card.className = `card ${soldOut ? "card--soldout" : ""}`;
+
+            // ? Visual section — image + badge ?
+            const affichage = document.createElement("div");
+            affichage.className = "card__visual";
 
             const img = document.createElement("img");
             img.className = "card__img";
             img.src = n.image;
             img.alt = n.titre;
 
-            const card = document.createElement("article");
-            card.className = `card ${soldOut ? "card--soldout" : ""}`;
-
-            const affichage = document.createElement("div");
-            affichage.className = "card__visual";
-
             const badge = document.createElement("span");
             badge.className = `card__badge card__badge--${n.type}`;
             badge.textContent = n.type;
 
+            // ? Body section — title, toggle, meta, fill bar, footer, btn ?
             const body = document.createElement("div");
             body.className = "card__body";
 
@@ -32,6 +40,25 @@ const cardsShows = async () => {
             title.className = "card__title";
             title.textContent = n.titre;
 
+            // ? Toggle button — show/hide description ?
+            const desc = document.createElement("p");
+            desc.className = "card__desc";
+            desc.textContent = n.description;
+            desc.style.display = "none";
+
+            const toggle = document.createElement("button");
+            toggle.className = "card__toggle";
+            toggle.textContent = "En savoir +";
+            toggle.setAttribute("aria-expanded", "false");
+
+            toggle.addEventListener("click", () => {
+                const isOpen = desc.style.display === "block";
+                desc.style.display = isOpen ? "none" : "block";
+                toggle.textContent = isOpen ? "En savoir +" : "Fermer −";
+                toggle.setAttribute("aria-expanded", !isOpen);
+            });
+
+            // ? Meta section — artist, date, horaire ?
             const meta = document.createElement("div");
             meta.className = "card__meta";
 
@@ -47,11 +74,18 @@ const cardsShows = async () => {
             horaire.className = "card__hours";
             horaire.textContent = n.horaire;
 
-            const btn = document.createElement("a");
-            btn.href = "pages/programmation.html";
-            btn.textContent = soldOut ? "Complet" : "Réserver";
-            btn.className = `card__btn ${soldOut ? "card__btn--soldout" : ""}`;
+            // ? Progress bar — places sold percentage ?
+            const fillBar = document.createElement("div");
+            fillBar.className = "card__fill";
 
+            const bar = document.createElement("div");
+            bar.className = "card__bar";
+
+            const progress = document.createElement("div");
+            progress.className = `card__progress ${soldOut ? "card__progress--soldout" : ""}`;
+            progress.style.width = `${pct}%`;
+
+            // ? Footer section — remaining places + price ?
             const footer = document.createElement("div");
             footer.className = "card__footer";
 
@@ -63,29 +97,35 @@ const cardsShows = async () => {
             prix.className = "card__price";
             prix.textContent = `${n.prix} €`;
 
+            // ? Reserve or full button ?
+            const btn = document.createElement("a");
+            btn.href = "pages/programmation.html";
+            btn.textContent = soldOut ? "Complet" : "Réserver";
+            btn.className = "card__btn";
+
+            // ? Append all elements in order ?
+            bar.appendChild(progress);
+            fillBar.appendChild(bar);
             meta.appendChild(artist);
             meta.appendChild(date);
             meta.appendChild(horaire);
-
-            affichage.appendChild(badge);
             affichage.appendChild(img);
-
-            body.appendChild(title);
-            body.appendChild(meta);
-
+            affichage.appendChild(badge);
             footer.appendChild(places);
             footer.appendChild(prix);
-
+            body.appendChild(title);
+            body.appendChild(toggle);
+            body.appendChild(desc);
+            body.appendChild(meta);
+            body.appendChild(fillBar);
             body.appendChild(footer);
             body.appendChild(btn);
-
             card.appendChild(affichage);
             card.appendChild(body);
-
             grid.appendChild(card);
         });
     } catch (error) {
-        console.error("Erreur lors du chargement des données:", error);
+        console.error("Error loading spectacles data:", error);
     }
 };
 

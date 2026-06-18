@@ -1,0 +1,62 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.cookies {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    background-color: $color-info;
+    color: $color-body;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba($color-body, 0.1);
+    box-shadow: 0 8px 30px rgba($color-info, 0.3);
+    z-index: 1000;
+    @include flex($justify: space-between, $gap: 1rem);
+    flex-wrap: wrap;
+
+    &.is-visible {
+        display: flex;
+    }
+
+    &__text {
+        font-size: 0.9rem;
+        color: $color-body;
+        flex: 1;
+    }
+
+    &__link {
+        color: $color-secondary;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__btns {
+        @include flex($gap: 0.75rem);
+    }
+
+    &__btn {
+        font-family: $font-secondary;
+        font-size: 0.85rem;
+        font-weight: $fw-semibold;
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.15s;
+
+        &--accept {
+            background-color: $color-secondary;
+            color: $color-info;
+        }
+
+        &--refuse {
+            background: transparent;
+            color: $color-body;
+            border: 1.5px solid $color-primary;
+        }
+    }
+}

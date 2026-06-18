@@ -9,6 +9,8 @@
 @use "components/cards";
 @use "components/salle";
 @use "components/newsletter";
+@use "components/cookies";
+@use "components/curtain";
 
 @use "pages/infos-pratiques";
 @use "pages/services";
@@ -16,3 +18,5 @@
 @use "pages/tarifs";
 @use "pages/plan";
 @use "pages/programmation";
+@use "pages/tooltip";
+@use "pages/mentions-legales";

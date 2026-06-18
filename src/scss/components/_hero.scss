@@ -2,6 +2,7 @@
 @use "../mixins" as *;
 
 .hero {
+    position: relative;
     height: 100vh;
     min-height: 520px;
     overflow: hidden;

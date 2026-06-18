@@ -53,6 +53,14 @@
         border-radius: 12px;
         background: rgba($color-body, 0.05);
         border: 1px solid rgba($color-body, 0.1);
+        cursor: pointer;
+        transition: border-color 0.15s;
+
+        &:hover,
+        &.is-active {
+            border-color: $color-secondary;
+            border: 2px solid $color-secondary;
+        }
 
         &-name {
             font-family: $font-primary;

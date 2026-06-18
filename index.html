@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="dist/css/main.min.css" />
     </head>
     <body>
-        <!-- Navbar -->
         <header>
             <nav class="navbar">
                 <div class="container">
@@ -51,6 +50,15 @@
         <!-- Hero -->
         <main>
             <section class="hero">
+                <!-- Curtain animation -->
+                <div class="curtain" id="curtain">
+                    <div class="curtain__left" id="curtain-left">
+                        <img src="src/assets/images/rideau-left.webp" alt="" aria-hidden="true" />
+                    </div>
+                    <div class="curtain__right" id="curtain-right">
+                        <img src="src/assets/images/rideau_right.webp" alt="" aria-hidden="true" />
+                    </div>
+                </div>
                 <div class="container">
                     <div class="hero__content">
                         <p class="hero__kicker">Salle polyvalente · centre-ville</p>
@@ -209,7 +217,7 @@
                         </ul>
                     </div>
                     <div class="footer__col">
-                        <h4 class="footer__title">Horaires billetterie</h4>
+                        <h3 class="footer__title">Horaires billetterie</h3>
                         <ul class="footer__list">
                             <li>Mar - Sam · 14h - 19h</li>
                             <li>Soirs de spectacle · 1h avant</li>
@@ -223,7 +231,7 @@
             <div class="footer__bottom">
                 <span>© 2026 Le Phosphore — Tous droits réservés</span>
                 <div>
-                    <a href="#" class="footer__bottom--link">Mentions légales</a>
+                    <a href="pages/mentions-legales.html" class="footer__bottom--link">Mentions légales</a>
                     ·
                     <a href="#" class="footer__bottom--link">Confidentialité</a>
                 </div>
@@ -232,7 +240,7 @@
         <div class="cookies" id="cookies-banner">
             <p class="cookies__text">
                 Nous utilisons des cookies pour améliorer votre expérience.
-                <a href="mentions-legales.html" class="cookies__link">En savoir plus</a>
+                <a href="pages/mentions-legales.html" class="cookies__link">En savoir plus</a>
             </p>
             <div class="cookies__btns">
                 <button class="cookies__btn cookies__btn--accept" id="cookies-accept">Accepter</button>
@@ -240,6 +248,8 @@
             </div>
         </div>
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="src/js/curtain.js"></script>
         <script src="src/js/cookies.js"></script>
         <script src="src/js/main.js"></script>
         <script src="src/js/burger.js"></script>

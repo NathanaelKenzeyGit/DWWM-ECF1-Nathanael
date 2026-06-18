@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Infos pratiques du Phosphore — accès, tarifs, plan de salle et services sur place."
+        />
         <title>Infos pratiques — Le Phosphore</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <link rel="stylesheet" href="../dist/css/main.min.css" />
@@ -31,13 +35,13 @@
                             </li>
                             <li class="navbar__item">
                                 <button class="navbar__cta--mobile">
-                                    <i class="fa-solid fa-ticket"></i>
+                                    <i class="fa-solid fa-ticket" aria-hidden="true"></i>
                                     Billetterie
                                 </button>
                             </li>
                         </ul>
                         <button class="navbar__cta">
-                            <i class="fa-solid fa-ticket"></i>
+                            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
                             Billetterie
                         </button>
                     </div>
@@ -67,37 +71,37 @@
                     </div>
                     <div class="services__grid">
                         <div class="services__card">
-                            <div class="services__icon"><i class="ph ph-wine"></i></div>
+                            <div class="services__icon"><i class="ph ph-wine" aria-hidden="true"></i></div>
                             <h3 class="services__name">Bar & Restauration</h3>
                             <p class="services__desc">
-                                Un bar à vins et petite restauration, avant la représentation et à l'entracte.
+                                Un bar à vins et restauration, avant la représentation et à l'entracte.
                             </p>
                             <ul class="services__list">
-                                <li>Ouvert dès 1h avant</li>
+                                <li>Ouvert 1h avant le début du spectacle</li>
                                 <li>Planches & douceurs</li>
                                 <li>Sans alcools & softs</li>
                             </ul>
                         </div>
                         <div class="services__card">
-                            <div class="services__icon"><i class="ph ph-coat-hanger"></i></div>
+                            <div class="services__icon"><i class="ph ph-coat-hanger" aria-hidden="true"></i></div>
                             <h3 class="services__name">Accueil & Vestiaire</h3>
                             <p class="services__desc">
-                                Équipe d'accueil dès l'ouverture des portes. Vestiaire gratuit disponible.
+                                Équipe d'accueil l'ouverture des portes. Vestiaire gratuit disponible.
                             </p>
                             <ul class="services__list">
-                                <li>Ouverture 30 min avant</li>
+                                <li>Ouverture 1h avant le début du spectacle</li>
                                 <li>Vestiaire gratuit</li>
                                 <li>Programme offert</li>
                             </ul>
                         </div>
                         <div class="services__card">
-                            <div class="services__icon"><i class="ph ph-wheelchair"></i></div>
+                            <div class="services__icon"><i class="ph ph-wheelchair" aria-hidden="true"></i></div>
                             <h3 class="services__name">Accessibilité</h3>
                             <p class="services__desc">
                                 Salle entièrement accessible PMR. Boucle magnétique disponible en salle.
                             </p>
                             <ul class="services__list">
-                                <li>Accès PMR de plain-pied</li>
+                                <li>Accès PMR toutes salles</li>
                                 <li>Boucle magnétique</li>
                                 <li>Places dédiées</li>
                             </ul>
@@ -200,21 +204,26 @@
                     <div class="plan__head">
                         <p class="plan__kicker">Choisir sa place</p>
                         <h2 class="plan__title">Plan de salle</h2>
-                        <p class="plan__desc">Explorez les zones, chaque espace évolue sa capacité et son tarif.</p>
+                        <p class="plan__desc">
+                            <i class="ph ph-cursor" aria-hidden="true"></i>
+                            Survolez une zone pour plus d'infos —
+                            <i class="ph ph-hand-tap" aria-hidden="true"></i>
+                            ou appuyez dessus sur mobile.
+                        </p>
                     </div>
                     <div class="plan__grid">
                         <div class="plan__zones">
-                            <div class="plan__zone">
+                            <div class="plan__zone" data-tooltip="Placement libre · Vue frontale optimale">
                                 <span class="plan__zone-name">Orchestre</span>
                                 <span class="plan__zone-places">60 places</span>
                                 <span class="plan__zone-price">32 €</span>
                             </div>
-                            <div class="plan__zone">
+                            <div class="plan__zone" data-tooltip="Sièges numérotés · Vue en hauteur">
                                 <span class="plan__zone-name">Mezzanine</span>
                                 <span class="plan__zone-places">36 places</span>
                                 <span class="plan__zone-price">28 €</span>
                             </div>
-                            <div class="plan__zone">
+                            <div class="plan__zone" data-tooltip="Vue panoramique · Accès PMR disponible">
                                 <span class="plan__zone-name">Galerie</span>
                                 <span class="plan__zone-places">24 places</span>
                                 <span class="plan__zone-price">24 €</span>
@@ -224,10 +233,13 @@
                             <img src="../src/assets/images/planDeSalle.svg" alt="Plan de salle Le Phosphore" />
                         </div>
                     </div>
+                    <!-- Infobulle -->
+                    <div class="tooltip" id="tooltip" role="tooltip" aria-live="polite"></div>
                 </div>
             </section>
         </main>
-        <!-- footer -->
+
+        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="footer__grid">
@@ -239,16 +251,16 @@
                         <p class="footer__tagline">Vibrez. Partagez. Émerveillez-vous.</p>
                     </div>
                     <div class="footer__col">
-                        <h4 class="footer__title">Navigation</h4>
+                        <h3 class="footer__title">Navigation</h3>
                         <ul class="footer__list">
-                            <li><a href="#" class="footer__link">Accueil</a></li>
-                            <li><a href="" class="footer__link">Programmation</a></li>
-                            <li><a href="" class="footer__link">Infos pratiques</a></li>
-                            <li><a href="" class="footer__link">Billetterie</a></li>
+                            <li><a href="../index.html" class="footer__link">Accueil</a></li>
+                            <li><a href="programmation.html" class="footer__link">Programmation</a></li>
+                            <li><a href="infos-pratiques.html" class="footer__link">Infos pratiques</a></li>
+                            <li><a href="programmation.html" class="footer__link">Billetterie</a></li>
                         </ul>
                     </div>
                     <div class="footer__col">
-                        <h4 class="footer__title">Contact</h4>
+                        <h3 class="footer__title">Contact</h3>
                         <ul class="footer__list">
                             <li>12 rue des Arts, Centre-ville</li>
                             <li><a href="#" class="footer__link">05 56 78 23 86</a></li>
@@ -256,12 +268,12 @@
                         </ul>
                     </div>
                     <div class="footer__col">
-                        <h4 class="footer__title">Horaires billetterie</h4>
+                        <h3 class="footer__title">Horaires billetterie</h3>
                         <ul class="footer__list">
                             <li>Mar - Sam · 14h - 19h</li>
-                            <li>Soirs de spectacle · dès 1h avant</li>
+                            <li>Soirs de spectacle · 1h avant</li>
                             <li>
-                                <a href="pages/infos-pratiques.html" class="footer__link">Accès & plan de salle ></a>
+                                <a href="infos-pratiques.html" class="footer__link">Accès & plan de salle ></a>
                             </li>
                         </ul>
                     </div>
@@ -270,13 +282,15 @@
             <div class="footer__bottom">
                 <span>© 2026 Le Phosphore — Tous droits réservés</span>
                 <div>
-                    <a href="#" class="footer__bottom--link">Mentions légales</a>
+                    <a href="mentions-legales.html" class="footer__bottom--link">Mentions légales</a>
                     ·
                     <a href="#" class="footer__bottom--link">Confidentialité</a>
                 </div>
             </div>
         </footer>
+
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
         <script src="../src/js/burger.js"></script>
+        <script src="../src/js/info-bubble.js"></script>
     </body>
 </html>

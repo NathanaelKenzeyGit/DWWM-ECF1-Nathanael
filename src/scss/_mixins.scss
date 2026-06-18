@@ -13,5 +13,9 @@
     font-weight: $fw-semibold;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: if($on-dark, $color-secondary, $color-primary);
+    @if $on-dark {
+        color: $color-secondary;
+    } @else {
+        color: $color-primary;
+    }
 }

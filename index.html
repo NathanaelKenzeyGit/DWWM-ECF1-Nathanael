@@ -75,7 +75,8 @@
                                 <i class="fa-solid fa-ticket"></i>
                                 Voir la programmation
                             </a>
-                            <a href="pages/infos-pratiques.html" class="hero__btn hero__btn--ghost">
+                            <a href="pages/infos-pratiques.html#plan" class="hero__btn hero__btn--ghost">
+                                <i class="ph ph-armchair"></i>
                                 Découvrir la salle
                             </a>
                         </div>
@@ -172,6 +173,13 @@
                 </p>
                 <form class="newsletter__form">
                     <input type="email" class="newsletter__input" placeholder="votre@email.fr" />
+                    <div class="newsletter__consent">
+                        <input type="checkbox" id="consent" name="consent" class="newsletter__checkbox" required />
+                        <label for="consent" class="newsletter__label">
+                            J'accepte que mes données soient utilisées pour recevoir la newsletter.
+                            <a href="pages/mentions-legales.html" class="newsletter__consent-link">En savoir plus</a>
+                        </label>
+                    </div>
                     <button type="submit" class="newsletter__btn">S'inscrire</button>
                 </form>
                 <div class="newsletter__socials">

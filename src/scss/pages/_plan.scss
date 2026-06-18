@@ -5,7 +5,7 @@
     background-color: $color-info;
     padding: 4rem 0;
     color: $color-body;
-
+    scroll-margin-top: 5rem;
     .container {
         @include flex($direction: column, $align: flex-start, $gap: 2.5rem);
     }

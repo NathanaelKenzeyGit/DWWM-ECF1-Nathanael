@@ -74,7 +74,29 @@
             background-color: rgba($color-secondary, 0.85);
         }
     }
+    &__consent {
+        @include flex($justify: flex-start, $gap: 0.75rem);
+        font-size: 0.82rem;
+        color: $color-body;
+    }
 
+    &__checkbox {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        accent-color: $color-secondary;
+        flex-shrink: 0;
+    }
+
+    &__label {
+        font-size: 0.82rem;
+        color: $color-body;
+    }
+
+    &__consent-link {
+        color: $color-secondary;
+        text-decoration: underline;
+    }
     &__socials {
         @include flex($gap: 1rem);
         margin-top: 0.5rem;

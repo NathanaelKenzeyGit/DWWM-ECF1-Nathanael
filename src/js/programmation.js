@@ -13,7 +13,7 @@ const createCard = (n) => {
 
     const img = document.createElement("img");
     img.className = "card__img";
-    img.src = n.image;
+    img.src = `../${n.image}`;
     img.alt = n.titre;
 
     const card = document.createElement("article");

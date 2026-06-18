@@ -29,9 +29,7 @@
 
     &__link {
         color: $color-secondary;
-        &:hover {
-            text-decoration: underline;
-        }
+        text-decoration: underline;
     }
 
     &__btns {

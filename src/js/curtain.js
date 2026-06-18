@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 
     // ? Non blocking — pointer-events none during animation ?
     curtain.style.pointerEvents = "none";
-
+    /* global gsap */
     gsap.timeline()
         .to(left, {
             x: "-100%",

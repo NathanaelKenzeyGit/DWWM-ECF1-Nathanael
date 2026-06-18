@@ -9,7 +9,7 @@
     @include flex;
     background:
         linear-gradient(rgba($color-info-dark, 0.5), rgba($color-info-dark, 0.5)),
-        url("/src/assets/images/scene_principale.webp") center / cover no-repeat;
+        url("../../src/assets/images/scene_principale.webp") center / cover no-repeat;
 
     .container {
         @include flex($justify: center);

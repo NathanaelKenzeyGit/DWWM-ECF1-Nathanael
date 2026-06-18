@@ -1,9 +1,12 @@
 const cardsShows = async () => {
     try {
         // ? Fetch spectacles data from JSON file ?
-        const response = await fetch("casrc/data/spectacles.json");
+
+        const response = await fetch("src/data/spectacles.json");
+
         // ? Convert response to JSON format ?
         const data = await response.json();
+
         // ? Get the shows grid container from the DOM ?
         const grid = document.getElementById("shows-grid");
 
@@ -11,7 +14,9 @@ const cardsShows = async () => {
         data.spectacles.slice(0, 3).forEach((n) => {
             // ? Calculate remaining places and sold out status ?
             const placesRestantes = n.places_total - n.places_vendues;
+
             const soldOut = placesRestantes === 0;
+
             // ? Calculate fill percentage for progress bar ?
             const pct = Math.round((n.places_vendues / n.places_total) * 100);
 
@@ -54,7 +59,7 @@ const cardsShows = async () => {
             toggle.addEventListener("click", () => {
                 const isOpen = desc.style.display === "block";
                 desc.style.display = isOpen ? "none" : "block";
-                toggle.textContent = isOpen ? "En savoir +" : "Fermer −";
+                toggle.textContent = isOpen ? "En savoir +" : "Fermer -";
                 toggle.setAttribute("aria-expanded", !isOpen);
             });
 

@@ -10,6 +10,7 @@ header {
     background-color: $color-primary;
     height: 5rem;
     @include flex;
+    border: 1px solid $color-secondary;
 
     &__brand {
         font-family: $font-primary;

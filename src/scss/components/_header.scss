@@ -75,7 +75,7 @@ header {
         display: none;
 
         @media (min-width: 768px) {
-            @include flex($gap: 0.5rem);
+            display: block;
             font-family: $font-secondary;
             font-weight: $fw-semibold;
             background-color: $color-secondary;
@@ -85,6 +85,7 @@ header {
             padding: 0.6rem 1.4rem;
             cursor: pointer;
             transition: background 0.15s;
+
             &:hover {
                 background-color: $color-secondary-light;
             }

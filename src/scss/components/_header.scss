@@ -29,6 +29,7 @@ header {
     #burger {
         color: $color-secondary;
         cursor: pointer;
+
         @media (min-width: 768px) {
             display: none;
         }

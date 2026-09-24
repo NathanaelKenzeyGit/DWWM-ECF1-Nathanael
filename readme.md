@@ -1,4 +1,3 @@
-Voici le README complété et enrichi :
 
 ```markdown
 # Le Phosphore — Salle de spectacle
